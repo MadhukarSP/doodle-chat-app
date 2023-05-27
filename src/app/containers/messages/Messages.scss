@@ -12,7 +12,7 @@
     flex-direction: column;
     width: 40rem;
     height: calc(100vh - 62px); // TODO: This is a hacky solution. Fix it at end
-    overflow-y: scroll;
+    overflow-y: auto;
     @media only screen and (max-width: 640px) {
         width: 100%;
         margin-left: 8px;

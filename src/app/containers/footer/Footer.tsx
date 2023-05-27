@@ -19,6 +19,10 @@ export default function Footer({ messages, setMessages }: Props) {
 
     const submitMessage = (e?: React.SyntheticEvent) => {
         if (e) e.preventDefault();
+        if (message === "") {
+            alert("Please enter something in input field");
+            return;
+        }
         const postMessageNow = async () => {
             const response = await postMessage(message);
             setMessage("");
@@ -38,7 +42,10 @@ export default function Footer({ messages, setMessages }: Props) {
         }
     };
 
-    if (postFailed) return <div className="error">Error while posting the message</div>;
+    if (postFailed) {
+        alert("Error while posting the message");
+        setPostFailed(false);
+    }
 
     return (
         <div className="footer" data-testid="footer">
