@@ -27,13 +27,13 @@ const headers = Object.freeze({
     'token': TOKEN,
 })
 
-export function postMessage(message: string) {
+export async function postMessage(message: string) {
     const data = {message, author};
-    axios.post(BASE_URL, data, {headers})
-    .then(res => {
+
+    try {
+        const res = await axios.post(BASE_URL, data, {headers});
         return res.data;
-    })
-    .catch((e) => {
+    } catch(e) {
         return "Error";
-    });
+    }
 }

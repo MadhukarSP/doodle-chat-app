@@ -1,0 +1,26 @@
+.messages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: calc(100vh - 62px); // TODO: This is a hacky solution. Fix it at end
+    padding-bottom: 62px; // TODO: This is a hacky solution. Fix it at end
+}
+
+.messages-container {
+    display: flex;
+    flex-direction: column;
+    width: 40rem;
+    height: calc(100vh - 62px); // TODO: This is a hacky solution. Fix it at end
+    overflow-y: scroll;
+    @media only screen and (max-width: 640px) {
+        width: 100%;
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+}
+
+.error {
+    color: black;
+    text-transform: uppercase;
+}

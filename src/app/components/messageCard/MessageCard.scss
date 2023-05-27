@@ -1,0 +1,58 @@
+// User type message box color: #fcf6c4
+// Other chats box color: #ffffff
+// Primary text color: #454b51
+// Secondary text color: #b7bdc1
+
+.message-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: 2px solid #eee;
+    border-radius: 4px;
+    padding: 8px;
+    margin-bottom: 16px;
+    max-width: 70%;
+    align-self: flex-start;
+    @media only screen and (max-width: 640px) {
+        margin-left: 16px;
+        margin-right: 16px;
+        max-width: 80%;
+    }
+}
+
+.message-card-self {
+    align-self: flex-end;
+    background-color: #fcf6c4;
+}
+
+.content {
+    color: #454b51;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.54px;
+    padding: 8px;
+    padding-right: 0;
+}
+
+.timestamp {
+    color: #b7bdc1;
+    font-size: 12px;
+    font-weight: 500;
+    padding-left: 8px;
+    padding-bottom: 8px;
+    padding-right: 8px;
+}
+
+.timestamp-self {
+    padding-bottom: 0;
+    padding-right: 0;
+    align-self: flex-end;
+}
+
+.author {
+    color: #b7bdc1;
+    font-size: 12px;
+    letter-spacing: 0.4px;
+    padding-left: 8px;
+    padding-top: 8px;
+}
